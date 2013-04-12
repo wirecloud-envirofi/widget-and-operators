@@ -1,0 +1,22 @@
+#initialMessageContainer{
+    margin-top: 5px;
+    position: absolute;
+}
+
+.title{
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    margin-left: 2px;i
+    white-space: nowrap;
+}
+
+.value{
+    display:inline;
+    margin-left: 12px;
+    white-space: nowrap;
+}
+
+tr{
+    height: 60px;
+}

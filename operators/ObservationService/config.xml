@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:usdl-core="http://www.linked-usdl.org/ns/usdl-core#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:wire="http://wirecloud.conwet.fi.upm.es/ns/widget#"
+    xmlns:vCard = "http://www.w3.org/2006/vcard/ns#"
+    xmlns:gr="http://purl.org/goodrelations/v1#">
+
+    <wire:Operator rdf:about="http://wirecloud.com/test">
+        <dcterms:title>observation-service</dcterms:title>
+        <wire:displayName>Observation Service</wire:displayName>
+        <dcterms:description>Subscribe to this service to receive real-time observations from Envirofi MDAF</dcterms:description>
+        <dcterms:creator rdf:resource="http://creatoruri/"/>
+        <usdl-core:versionInfo>0.1</usdl-core:versionInfo>
+        <wire:hasImageUri rdf:resource="images/catalogue.png"/>
+        <usdl-core:utilizedResource rdf:resource="js/main.js"/>
+        <usdl-core:utilizedResource rdf:resource="js/observation.js"/>
+        <foaf:page rdf:resource="http://conwet.fi.upm.es/docs/display/wirecloud"/>
+        <usdl-core:hasProvider rdf:resource="http://vendoruri/"/>
+
+        <vCard:addr>
+            <vCard:Work>
+                <vCard:email>sblanco@conwet.com</vCard:email>
+            </vCard:Work>
+        </vCard:addr>
+
+        <wire:hasPlatformWiring>
+            <wire:PlatformWiring rdf:ID="wiring">
+                <wire:hasInputEndpoint>
+                    <wire:InputEndpoint rdf:ID="input_1">
+                        <dcterms:title>reportInput</dcterms:title>
+                        <dcterms:description>This report will update its observation</dcterms:description>
+                        <wire:actionLabel>Report</wire:actionLabel>
+                        <wire:type>text</wire:type>
+                        <rdfs:label>Report</rdfs:label>
+                        <wire:friendcode>report</wire:friendcode>
+                    </wire:InputEndpoint>
+                </wire:hasInputEndpoint>
+                <wire:hasInputEndpoint>
+                    <wire:InputEndpoint rdf:ID="input_2">
+                        <dcterms:title>timeIntervalInput</dcterms:title>
+                        <dcterms:description>Time Interval to be used as a filter.</dcterms:description>
+                        <wire:actionLabel>Time Interval</wire:actionLabel>
+                        <wire:type>text</wire:type>
+                        <rdfs:label>Time Interval</rdfs:label>
+                        <wire:friendcode>timeInterval</wire:friendcode>
+                    </wire:InputEndpoint>
+                </wire:hasInputEndpoint>
+                <wire:hasInputEndpoint>
+                    <wire:InputEndpoint rdf:ID="input_3">
+                        <dcterms:title>viewportInput</dcterms:title>
+                        <dcterms:description>Visible area to be used as a filter.</dcterms:description>
+                        <wire:actionLabel>Viewport</wire:actionLabel>
+                        <wire:type>text</wire:type>
+                        <rdfs:label>Viewport</rdfs:label>
+                        <wire:friendcode>viewport</wire:friendcode>
+                    </wire:InputEndpoint>
+                </wire:hasInputEndpoint>
+                <wire:hasOutputEndpoint>
+                    <wire:OutputEndpoint rdf:ID="output_1">
+                        <dcterms:title>outputInsertObservation</dcterms:title>
+                        <dcterms:description>Send an observation to do an insertion</dcterms:description>
+                        <wire:type>text</wire:type>
+                        <rdfs:label>Insert Observation</rdfs:label>
+                        <wire:friendcode>observation</wire:friendcode>
+                    </wire:OutputEndpoint>
+                </wire:hasOutputEndpoint>
+                <wire:hasOutputEndpoint>
+                    <wire:OutputEndpoint rdf:ID="output_2">
+                        <dcterms:title>outputDeleteObservation</dcterms:title>
+                        <dcterms:description>Send an observation to do a deletion</dcterms:description>
+                        <wire:type>text</wire:type>
+                        <rdfs:label>Delete Observation</rdfs:label>
+                        <wire:friendcode>observation</wire:friendcode>
+                    </wire:OutputEndpoint>
+                </wire:hasOutputEndpoint>
+            </wire:PlatformWiring>
+        </wire:hasPlatformWiring>
+    </wire:Operator>
+
+    <foaf:Person rdf:about="http://creatoruri/">
+        <foaf:name>sblanco</foaf:name>
+    </foaf:Person>
+
+    <gr:BusinessEntity rdf:about="http://vendoruri/">
+        <foaf:name>CoNWeT</foaf:name>
+    </gr:BusinessEntity>
+
+    <foaf:Image rdf:about="images/catalogue.png">
+        <dcterms:title>ImageURI</dcterms:title>
+    </foaf:Image>
+
+    <usdl-core:Resource rdf:about="js/main.js">
+        <wire:index>0</wire:index>
+    </usdl-core:Resource>
+
+    <usdl-core:Resource rdf:about="js/observation.js">
+        <wire:index>1</wire:index>
+    </usdl-core:Resource>
+</rdf:RDF>

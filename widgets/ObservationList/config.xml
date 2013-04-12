@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template xmlns="http://wirecloud.conwet.fi.upm.es/ns/template#">
+    <Catalog.ResourceDescription>
+        <Vendor>CoNWeT</Vendor>
+        <Name>observation-list</Name>
+        <DisplayName>Observation List</DisplayName>
+        <Author>jserrano</Author>
+        <Version>0.1.0</Version>
+        <Mail>jserrano@conwet.com</Mail>
+        <Description>This widget shows observations coming from MDAF</Description>
+        <ImageURI>images/catalogue.png</ImageURI>
+        <iPhoneImageURI>images/catalogueSmartphone.png</iPhoneImageURI>
+        <WikiURI></WikiURI>
+    </Catalog.ResourceDescription>
+
+    <Platform.Wiring>
+        <InputEndpoint
+            name="observationInput"
+            type="text"
+            description="It highlights a list item when an observation arrives."
+            label="Observation"
+            friendcode="observation">
+        </InputEndpoint>
+        <InputEndpoint
+            name="observationListInput"
+            type="text"
+            description="It receives an observation list to display"
+            label="Observation List"
+            friendcode="observationList">
+        </InputEndpoint>
+        <OutputEndpoint
+            name="observationOutput"
+            type="text"
+            description="It sends an observation through wiring"
+            label="Observation"
+            action_label="Observation"
+            friendcode="observation">
+        </OutputEndpoint>
+    </Platform.Wiring>
+
+    <Platform.Link>
+        <XHTML href="index.html" contenttype="text/html" cacheable="false" use-platform-style="true"/>
+    </Platform.Link>
+    <Platform.Rendering width="10" height="20"/>
+</Template>

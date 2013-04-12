@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template xmlns="http://wirecloud.conwet.fi.upm.es/ns/template#">
+    <Catalog.ResourceDescription>
+        <Vendor>CoNWeT</Vendor>
+        <Name>observation-report</Name>
+        <DisplayName>Observation Report</DisplayName>
+        <Author>sblanco</Author>
+        <Version>0.0.1</Version>
+        <Mail>sblanco@conwet.com</Mail>
+        <Description>Do you want to make a comment about an observation? Report your opinion with this widget.</Description>
+        <ImageURI>images/catalogue.png</ImageURI>
+        <iPhoneImageURI>images/catalogueSmartphone.png</iPhoneImageURI>
+        <WikiURI></WikiURI>
+    </Catalog.ResourceDescription>
+
+    <Platform.Wiring>
+        <InputEndpoint
+            name="observationInput"
+            type="text"
+            description="It receives an observation to be discussed."
+            label="Observation"
+            friendcode="observation">
+        </InputEndpoint>
+        <OutputEndpoint
+            name="observationReportOutput"
+            type="text"
+            description="Cuando se termina de evaluar una observacion se envia resuelta."
+            label="Report"
+            action_label="Observation Report"
+            friendcode="report">
+        </OutputEndpoint>
+    </Platform.Wiring>
+
+    <Platform.Link>
+        <XHTML href="index.html" contenttype="text/html" cacheable="false" use-platform-style="true"/>
+    </Platform.Link>
+    <Platform.Rendering width="4" height="40" />
+</Template>
